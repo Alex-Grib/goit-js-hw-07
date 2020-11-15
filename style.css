@@ -45,3 +45,33 @@ ul {
 .name-task-seven {
   color: blanchedalmond;
 }
+
+.btn {
+  padding-bottom: 20px;
+}
+.button-decrement {
+  margin-right: 20px;
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  color: #f44336;
+  background-color: aqua;
+}
+
+.text-task-four {
+  font-size: 20px;
+}
+
+.button-increment {
+  margin-left: 20px;
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  color: #f8e91c;
+  background-color: rgb(13, 14, 4);
+}
+
+.gallery-item {
+  width: 400px;
+  height: 300px;
+}
