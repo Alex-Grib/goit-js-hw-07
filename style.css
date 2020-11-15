@@ -10,10 +10,20 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: bisque;
+}
 ul {
   margin: 0;
   padding-bottom: 15px;
+  list-style: none;
 }
+.list {
+  list-style: none;
+}
+
 #gallery {
   display: flex;
   flex-wrap: wrap;
