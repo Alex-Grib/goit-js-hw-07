@@ -1,26 +1,21 @@
 
 
-/* Taks 6
-Напиши скрипт, который бы при потере фокуса на инпуте, 
-проверял его содержимое на правильное количество символов.
-Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
-Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
-Для добавления стилей, используй CSS-классы valid и invalid.
-*/
 
-const testInputRef = document.querySelector('#validation-input');
-// console.dir(testInputRef);
 
-testInputRef.addEventListener('focus', onInputFocus);
-testInputRef.addEventListener('blur', onInputBlur);
+const input = document.querySelector("#validation-input");
 
-function onInputBlur(event) {
-  const validLengthRef = Number(testInputRef.getAttribute('data-length'));
-  const valueInputRef = event.target.value;
-  return valueInputRef.length === validLengthRef
-    ? testInputRef.classList.add('valid')
-    : testInputRef.classList.add('invalid');
+const inputBorder = function(event) {
+
+    input.classList.add('invalid');
+
+    switch (event.currentTarget.value.length) {
+        case Number(event.target.dataset.length):
+            input.classList.replace("invalid", "valid");
+            break;
+        case 0:
+            input.classList.remove("invalid");
+            break;
+
+    }
 }
-function onInputFocus() {
-  testInputRef.classList.remove('valid', 'invalid');
-}
+input.addEventListener('input', inputBorder);
