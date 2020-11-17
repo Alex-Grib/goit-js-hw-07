@@ -13,7 +13,7 @@ const inputBorder = function(event) {
             input.classList.replace("invalid", "valid");
             break;
         case 0:
-            input.classList.remove("invalid");
+            input.classList.remove("invalid", "valid");
             break;
 
     }
